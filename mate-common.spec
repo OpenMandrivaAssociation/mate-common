@@ -1,11 +1,11 @@
 Name:		mate-common
 Summary:	Common files for MATE desktop environment
-Version:	1.2.1
+Version:	1.2.2
 Release:	1
 License:	GPLv3+
 Group:		Graphical desktop/Other
 URL:		http://www.mate-desktop.org
-Source0:	http://pub.mate-desktop.org/releases/1.2/mate-common-1.2.1.tar.xz
+Source0:	http://pub.mate-desktop.org/releases/1.2/%{name}-%{version}.tar.xz
 BuildArch:	noarch
 
 %description
