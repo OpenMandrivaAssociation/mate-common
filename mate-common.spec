@@ -33,4 +33,6 @@ install -d %{buildroot}%{_docdir}/%{name}/
 %{_bindir}/mate-*
 %{_datadir}/%{name}
 %{_datadir}/aclocal/mate-*.m4
+%{_mandir}/man1/mate-autogen.1*
+%{_mandir}/man1/mate-doc-common.1*
 
