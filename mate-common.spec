@@ -1,11 +1,11 @@
-Name:		mate-common
 Summary:	Common files for MATE desktop environment
-Version:	1.2.2
+Name:		mate-common
+Version:	1.4.0
 Release:	1
 License:	GPLv3+
 Group:		Graphical desktop/Other
 URL:		http://www.mate-desktop.org
-Source0:	http://pub.mate-desktop.org/releases/1.2/%{name}-%{version}.tar.xz
+Source0:	http://pub.mate-desktop.org/releases/1.4/%{name}-%{version}.tar.xz
 BuildArch:	noarch
 
 %description
@@ -18,15 +18,19 @@ traditional metaphors.
 %setup -q
 
 %build
-./autogen.sh --prefix=%{_prefix}
+NOCONFIGURE=yes ./autogen.sh
+%configure2_5x \
+ 	--build=%{_build}
+
 %make
 
 %install
 %makeinstall_std
-%__install -d %{buildroot}%{_docdir}/%{name}/
+install -d %{buildroot}%{_docdir}/%{name}/
 
 %files
+%doc AUTHORS ChangeLog NEWS README
 %{_bindir}/mate-*
 %{_datadir}/%{name}
 %{_datadir}/aclocal/mate-*.m4
-%doc AUTHORS ChangeLog NEWS README
+
