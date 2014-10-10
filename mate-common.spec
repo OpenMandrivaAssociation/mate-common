@@ -3,7 +3,7 @@
 Summary:	Common files for MATE desktop environment
 Name:		mate-common
 Version:	1.8.0
-Release:	1
+Release:	2
 License:	GPLv3+
 Group:		Graphical desktop/Other
 Url:		http://www.mate-desktop.org
@@ -18,10 +18,10 @@ traditional metaphors.
 
 %prep
 %setup -q
+NOCONFIGURE=yes ./autogen.sh
 
 %build
-NOCONFIGURE=yes ./autogen.sh
-%configure2_5x \
+%configure \
  	--build=%{_build}
 
 %make
