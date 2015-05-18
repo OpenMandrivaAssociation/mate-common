@@ -2,8 +2,8 @@
 
 Summary:	Common files for MATE desktop environment
 Name:		mate-common
-Version:	1.8.0
-Release:	3
+Version:	1.10.0
+Release:	1
 License:	GPLv3+
 Group:		Graphical desktop/Other
 Url:		http://www.mate-desktop.org
