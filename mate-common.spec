@@ -2,12 +2,12 @@
 
 Summary:	Common files for MATE desktop environment
 Name:		mate-common
-Version:	1.14.0
+Version:	1.18.0
 Release:	1
 License:	GPLv3+
 Group:		Graphical desktop/Other
-Url:		http://www.mate-desktop.org
-Source0:	http://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
+Url:		https://www.mate-desktop.org
+Source0:	https://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
 BuildArch:	noarch
 
 %description
@@ -16,24 +16,29 @@ MATE is a fork of Gnome 2.
 It provides an intuitive and attractive desktop to Linux users using
 traditional metaphors.
 
+This package contains sample files userful for building much every MATE
+application.
+
 %prep
 %setup -q
-NOCONFIGURE=yes ./autogen.sh
+
 
 %build
+NOCONFIGURE=yes ./autogen.sh
 %configure \
- 	--build=%{_build}
-
+	--build=%{_build} \
+	%{nil}
 %make
 
 %install
 %makeinstall_std
-install -d %{buildroot}%{_docdir}/%{name}/
 
 %files
-%doc AUTHORS ChangeLog NEWS README
-%{_bindir}/mate-*
-%{_datadir}/%{name}
+%doc AUTHORS ChangeLog NEWS README TODO COPYING
+%{_bindir}/mate-autogen
+%{_bindir}/mate-doc-common
+%dir %{_datadir}/%{name}
+%{_datadir}/%{name}/*
 %{_datadir}/aclocal/mate-*.m4
 %{_mandir}/man1/mate-autogen.1*
 %{_mandir}/man1/mate-doc-common.1*
