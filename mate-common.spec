@@ -34,7 +34,7 @@ NOCONFIGURE=yes ./autogen.sh
 %makeinstall_std
 
 %files
-%doc AUTHORS ChangeLog NEWS README TODO COPYING
+%doc AUTHORS ChangeLog NEWS README COPYING
 %{_bindir}/mate-autogen
 %{_bindir}/mate-doc-common
 %dir %{_datadir}/%{name}
