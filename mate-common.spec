@@ -11,27 +11,15 @@ Source0:	https://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar
 BuildArch:	noarch
 
 %description
-MATE is a fork of Gnome 2.
+The MATE Desktop Environment is the continuation of GNOME 2. It provides an
+intuitive and attractive desktop environment using traditional metaphors for
+Linux and other Unix-like operating systems.
 
-It provides an intuitive and attractive desktop to Linux users using
-traditional metaphors.
+MATE is under active development to add support for new technologies while
+preserving a traditional desktop experience.
 
-This package contains sample files userful for building much every MATE
-application.
-
-%prep
-%setup -q
-
-
-%build
-NOCONFIGURE=yes ./autogen.sh
-%configure \
-	--build=%{_build} \
-	%{nil}
-%make
-
-%install
-%makeinstall_std
+This package contains sample files required for building pretty much
+every MATE application.
 
 %files
 %doc AUTHORS ChangeLog NEWS README COPYING
@@ -42,4 +30,19 @@ NOCONFIGURE=yes ./autogen.sh
 %{_datadir}/aclocal/mate-*.m4
 %{_mandir}/man1/mate-autogen.1*
 %{_mandir}/man1/mate-doc-common.1*
+
+#----------------------------------------------------------------------------
+
+%prep
+%setup -q
+
+%build
+NOCONFIGURE=yes ./autogen.sh
+%configure \
+	--build=%{_build} \
+	%{nil}
+%make
+
+%install
+%makeinstall_std
 
