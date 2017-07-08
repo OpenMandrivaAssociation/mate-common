@@ -10,6 +10,17 @@ Url:		https://www.mate-desktop.org
 Source0:	https://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
 BuildArch:	noarch
 
+Requires:	automake
+Requires:	autoconf
+Requires:	gettext
+Requires:	intltool
+Requires:	itstool
+Requires:	libtool
+Requires:	pkgconf
+Requires:	pkgconfig(glib-2.0)
+Requires:	pkgconfig(gtk-doc)
+Requires:	yelp-tools
+
 %description
 The MATE Desktop Environment is the continuation of GNOME 2. It provides an
 intuitive and attractive desktop environment using traditional metaphors for
