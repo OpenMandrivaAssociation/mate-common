@@ -16,9 +16,9 @@ Requires:	gettext
 Requires:	intltool
 Requires:	itstool
 Requires:	libtool
-Requires:	pkgconf
 Requires:	pkgconfig(glib-2.0)
 Requires:	pkgconfig(gtk-doc)
+Requires:	pkgconfig(pkg-config)
 Requires:	yelp-tools
 
 %description
