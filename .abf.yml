@@ -1,3 +1,4 @@
-sources:
+removed_sources:
   mate-common-1.18.0.tar.xz: e5853086fdce062ddd9443cfe72f3cb5c5a91331
-
+sources:
+  mate-common-1.20.0.tar.xz: 5e092883770b53cf6996bbc26db791ca112d0356
