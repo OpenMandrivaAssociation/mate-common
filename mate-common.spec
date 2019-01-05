@@ -3,7 +3,7 @@
 Summary:	Common files for MATE desktop environment
 Name:		mate-common
 Version:	1.20.0
-Release:	2
+Release:	3
 License:	GPLv3+
 Group:		Graphical desktop/Other
 Url:		https://www.mate-desktop.org
@@ -16,9 +16,8 @@ Requires:	gettext
 Requires:	intltool
 Requires:	itstool
 Requires:	libtool
-Requires:	pkgconfig(glib-2.0)
 Requires:	pkgconfig(pkg-config)
-Requires:	yelp-tools
+
 
 %description
 The MATE Desktop Environment is the continuation of GNOME 2. It provides an
@@ -55,4 +54,3 @@ NOCONFIGURE=yes ./autogen.sh
 
 %install
 %make_install
-
