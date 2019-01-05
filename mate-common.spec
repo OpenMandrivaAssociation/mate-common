@@ -17,7 +17,6 @@ Requires:	intltool
 Requires:	itstool
 Requires:	libtool
 Requires:	pkgconfig(glib-2.0)
-Requires:	pkgconfig(gtk-doc)
 Requires:	pkgconfig(pkg-config)
 Requires:	yelp-tools
 
@@ -52,8 +51,8 @@ NOCONFIGURE=yes ./autogen.sh
 %configure \
 	--build=%{_build} \
 	%{nil}
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
