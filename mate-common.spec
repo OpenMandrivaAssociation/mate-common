@@ -3,21 +3,22 @@
 Summary:	Common files for MATE desktop environment
 Name:		mate-common
 Version:	1.26.0
-Release:	3
+Release:	4
 License:	GPLv3+
 Group:		Graphical desktop/Other
 Url:		https://www.mate-desktop.org
 Source0:	https://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
 BuildArch:	noarch
-
 Requires:	automake
 Requires:	autoconf
+Requires:	autoconf-archive
 Requires:	gettext
 Requires:	intltool
 Requires:	itstool
 Requires:	libtool
+Requires:	yelp-tools
 Requires:	pkgconfig(pkg-config)
-
+Requires:	pkgconfig(glib-2.0)
 
 %description
 The MATE Desktop Environment is the continuation of GNOME 2. It provides an
@@ -37,19 +38,19 @@ every MATE application.
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/*
 %{_datadir}/aclocal/mate-*.m4
-%{_mandir}/man1/mate-autogen.1*
-%{_mandir}/man1/mate-doc-common.1*
+%doc %{_mandir}/man1/mate-autogen.1*
+%doc %{_mandir}/man1/mate-doc-common.1*
 
 #---------------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 NOCONFIGURE=yes ./autogen.sh
 %configure \
 	--build=%{_build} \
-	%{nil}
+
 %make_build
 
 %install
