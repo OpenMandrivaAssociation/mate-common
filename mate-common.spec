@@ -1,13 +1,13 @@
-%define url_ver %(echo %{version}|cut -d. -f1,2)
+%define mate_ver	%(echo %version | cut -d\. -f1-2)
 
 Summary:	Common files for MATE desktop environment
 Name:		mate-common
-Version:	1.27.1
+Version:	1.28.0
 Release:	1
 License:	GPLv3+
 Group:		Graphical desktop/Other
 Url:		https://www.mate-desktop.org
-Source0:	https://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
+Source0:	https://pub.mate-desktop.org/releases/%{mate_ver}/%{name}-%{version}.tar.xz
 BuildArch:	noarch
 Requires:	automake
 Requires:	autoconf
@@ -50,7 +50,7 @@ every MATE application.
 NOCONFIGURE=yes ./autogen.sh
 %configure \
 	--build=%{_build} \
-
+	%{nil}
 %make_build
 
 %install
