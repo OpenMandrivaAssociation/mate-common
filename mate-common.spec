@@ -8,7 +8,7 @@ License:	GPLv3+
 Group:		Graphical desktop/Other
 Url:		https://www.mate-desktop.org
 Source0:	https://pub.mate-desktop.org/releases/%{mate_ver}/%{name}-%{version}.tar.xz
-BuildArch:	noarch
+
 Requires:	automake
 Requires:	autoconf
 Requires:	autoconf-archive
@@ -19,6 +19,8 @@ Requires:	libtool
 Requires:	yelp-tools
 Requires:	pkgconfig(pkg-config)
 Requires:	pkgconfig(glib-2.0)
+
+BuildArch:	noarch
 
 %description
 The MATE Desktop Environment is the continuation of GNOME 2. It provides an
@@ -47,7 +49,7 @@ every MATE application.
 %autosetup -p1
 
 %build
-NOCONFIGURE=yes ./autogen.sh
+#NOCONFIGURE=yes ./autogen.sh
 %configure \
 	--build=%{_build} \
 	%{nil}
@@ -55,3 +57,4 @@ NOCONFIGURE=yes ./autogen.sh
 
 %install
 %make_install
+
