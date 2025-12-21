@@ -22,6 +22,11 @@ Requires:	pkgconfig(glib-2.0)
 
 BuildArch:	noarch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 The MATE Desktop Environment is the continuation of GNOME 2. It provides an
 intuitive and attractive desktop environment using traditional metaphors for
